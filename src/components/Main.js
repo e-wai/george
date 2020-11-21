@@ -5,7 +5,6 @@ const Main = () => {
     
     const [userUID, setUserUID] = useState("");
     const [userData, setUserData] = useState({});
-    // const currentUser = fire.auth().currentUser;
     const usersRef = fire.firestore().collection('users')
 
     useEffect(() => {
@@ -13,6 +12,8 @@ const Main = () => {
             if (user) {
               console.log("user" + user.uid)
               setUserUID(user.uid);
+            } else {
+                window.location.href = "http://localhost:3000/"
             }
         });
     }, [])
@@ -38,6 +39,12 @@ const Main = () => {
         <div>
             Welcome {userUID}!
             {userData.email}
+            <button onClick={() => {
+                fire.auth().signOut().then(() => alert('User signed out!'));
+                window.location.href = "http://localhost:3000/";
+            }}>
+                Logout
+            </button>
         </div>
     );
 
