@@ -1,15 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import SignupModalComponent from './components/SignupModalComponent';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <SignupModalComponent/>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <SignupModalComponent/>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
