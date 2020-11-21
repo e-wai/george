@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import fire from "../firebase";
 
 const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        fire.auth().onAuthStateChanged(user => {
+            if (user) {
+                window.location.href = "http://localhost:3000/main"
+            } 
+        });
+    }, [])
 
     const loginClicked = () => {
         fire
