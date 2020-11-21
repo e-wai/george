@@ -4,19 +4,79 @@
             "total_discount": 2.5,
             "store_location_lat": 15.222,
             "store_location_long": 14.222,
-            "store_hours": [9, 21]
+            "store_hours": [9, 21],
+            "items": {
+                "item_1_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                },
+                "item_2_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                },
+                "item_3_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                }
+            }
         },
         "store_2_name": {
             "total_discount": 12.5,
             "store_location_lat": 15.222,
             "store_location_long": 14.222,
-            "store_hours": [9, 21]
+            "store_hours": [9, 21],
+            "items": {
+                "item_1_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                },
+                "item_2_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                },
+                "item_3_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                }
+            }
         },
         "store_3_name": {
             "total_discount": 22.5,
             "store_location_lat": 15.222,
             "store_location_long": 14.222,
-            "store_hours": [9, 21]
+            "store_hours": [9, 21],
+            "items": {
+                "item_1_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                },
+                "item_2_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                },
+                "item_3_name": {
+                    "discount": 2.5,
+                    "store_name": "Loblaws",
+                    "store_location_lat": 15.222,
+                    "store_location_long": 14.222
+                }
+            }
         }
     }
 }
