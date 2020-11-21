@@ -6,6 +6,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    // Checking if user is already online
     useEffect(() => {
         fire.auth().onAuthStateChanged(user => {
             if (user) {

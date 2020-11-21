@@ -8,13 +8,14 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [phone_number, setPhoneNumber] = useState("");
 
-    useEffect(() => {
-        fire.auth().onAuthStateChanged(user => {
-            if (user) {
-                window.location.href = "http://localhost:3000/main"
-            } 
-        });
-    }, [])
+    // Checking if user is already online
+    // useEffect(() => {
+    //     fire.auth().onAuthStateChanged(user => {
+    //         if (user) {
+    //             window.location.href = "http://localhost:3000/main"
+    //         } 
+    //     });
+    // }, [])
 
     const registerClicked = () => {
 
