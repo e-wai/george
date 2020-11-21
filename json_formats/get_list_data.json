@@ -1,0 +1,6 @@
+{
+    "location_lat": 12.333,
+    "location_lon": 18.201,
+    "items": ["item 1", "item 2", "item 3", "item 4"],
+    "optional_excluded_stores": ["name", "name", "name"] 
+}
