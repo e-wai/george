@@ -33,6 +33,8 @@ const Login = () => {
                     }
                     window.location.href = "http://localhost:3000/main";
                 })
+         }).catch(error => {
+             alert(error);
          })
     }
 
