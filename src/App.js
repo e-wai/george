@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Register from './components/Register.js';
 import Login from './components/Login.js';
 import Main from './components/Main.js';
+import Intro from './components/Intro.js';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path="/register" component={Register} exact />
         <Route path="/login" component={Login} exact />
         <Route path="/main" component={Main} exact />
+        <Route path="/intro" component={Intro} exact />
       </Switch>
     </main>
   );
