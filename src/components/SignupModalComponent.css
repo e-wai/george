@@ -18,7 +18,7 @@ button:focus {
     flex-direction: row;
     flex-wrap: wrap;
     width: 65vw;
-    height: 70vh;
+    height: 75vh;
     left: 17.5%;
     top: 14%;
     position: absolute;
@@ -31,8 +31,8 @@ button:focus {
     flex-direction: row;
     flex-wrap: wrap;
     width: 65vw;
-    height: 71.25vh;
-    left: 17.5%;
+    height: 75vh;
+    left: 16.5%;
     top: 14%;
     position: absolute;
     border-radius: 50px;
@@ -155,6 +155,7 @@ button:focus {
     font-family: 'Open Sans',serif;
     color: #2B3A70;
     font-weight: 800;
+    width:95% !important;
 }
 
 
@@ -262,6 +263,7 @@ label {
     text-align: right;
     font-family: 'Open Sans',serif;
     position: relative;
+    top: 2.5%;
     right: 5%;
 }
 
@@ -287,7 +289,7 @@ input {
     position: relative;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    width: 85%;
+    width: 90%;
     box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
     border: 5px #ffffff;
