@@ -13,7 +13,7 @@
 
 .searchBar {
     width: 100%;
-    height: 150px;
+    height: 130px;
     background: #FFFFFF;
     box-shadow: 4px 4px 4px 4px rgba(201, 201, 201, 0.3);
     display: flex;
@@ -21,27 +21,27 @@
     justify-content: center;
 }
 
-.appIconContainer {
+.icon {
     width: 75px;
     height: 75px;
-
-    background: #C4C4C4;
-    border-radius: 75px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    left: 40px;
 }
 
 .appIcon {
-    width: 50px;
-    height: 50px;
+
+    width: 70px;
+    height: 70px;
 }
 
 .searchField {
-    width: 1000px;
-    height: 70px;
-    font-size: 40px;
+    width: 900px;
+    height: 60px;
+    font-size: 32px;
 
     background: #FBFBFB;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
@@ -54,6 +54,7 @@
     margin-bottom: 0;
     
 }
+
 .searchField:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
@@ -67,10 +68,10 @@
 
 .logoutContainer, .checkoutContainer {
     position: absolute;
-    width: 75px;
-    height: 75px; 
+    width: 60px;
+    height: 60px; 
 
-    border-radius: 75px;
+    border-radius: 55px;
     background: #FBFBFB;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 
@@ -80,17 +81,16 @@
 }
 
 .logoutContainer {
-    right: 20px;
+    right: 40px;
 }
 
 .checkoutContainer {
     right: 120px;
 }
 
-
 .logoutIcon, .marketIcon {
-    width: 50px;
-    height: 50px; 
+    width: 35px;
+    height: 35px; 
 }
 
 .logoutContainer:hover, .searchIcon:hover, .marketIcon {
@@ -140,6 +140,7 @@
     border: 10px #FFFFFF;
     font-family: 'Open Sans',serif;
     font-size: 17.5px;
+    font-weight: 600;
     cursor: pointer;
     width: 450px;
     text-align: center;
@@ -202,6 +203,9 @@
 .shoppingListText {
     margin-left: 1em;
     margin-top: 1em;
+    font-family: Open Sans;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .deleteIcon {
