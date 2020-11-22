@@ -31,6 +31,7 @@ const Register = () => {
                 email,
                 password,
                 phone_number,
+                items: [],
             };
 
             const usersRef = fire.firestore().collection('users');

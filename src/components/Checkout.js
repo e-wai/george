@@ -126,6 +126,8 @@ const Checkout = () => {
                                 {/* <p className="totalPriceText">{items_price}</p> */}
                                 <p className="totalPriceText"><span>Total: $</span>{calculateTotal(2)}</p>
                         </div>
+                        <div>{calculateTotal(1)-calculateTotal(2)}</div>
+                        
                     </div>
                 </div>
                 <div className="listViews">
