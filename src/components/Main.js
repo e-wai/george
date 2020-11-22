@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import fire from '../firebase.js';
 import Item from './Item.js';
+import ItemDescription from './ItemDescription.js';
 import './Main.css';
 import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
 import marketIcon from '../assets/shopping_cart-24px.svg';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const Main = () => {    
     const [userUID, setUserUID] = useState("");
@@ -47,9 +50,8 @@ const Main = () => {
             .then(res => res.json())
             .then(
                 (result) => {
-                    setServerMessage(result[0]['link']);
-                    console.log(result[0]['link']);
-                    console.log(result)
+                    setServerMessage(result['tnt'][0]['image']);
+                    // console.log(result[0]['link']);
                 },
                 (error) => console.log(error)
             )
@@ -83,12 +85,16 @@ const Main = () => {
             <div className="itemsContainer">
                 {/* Get number of items recieved from backend and map them here */}
                 {/* Pass in JSON object to Item.js */}
+                <Item data={{
+                    name: "Apple",
+                    image: "https://i5.walmartimages.ca/images/Enlarge/094/514/6000200094514.jpg",
+                    price: "$15.00",
+                }}/>
+                {/* <Item />
                 <Item />
                 <Item />
                 <Item />
-                <Item />
-                <Item />
-                <Item />
+                <Item /> */}
             </div>
  
             <a href={"http://localhost:3000/Checkout"}>login</a>                    
