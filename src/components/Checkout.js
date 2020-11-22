@@ -7,6 +7,8 @@ import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
 import loblawsIcon from '../assets/loblaws_icon.png'
 import pcExpressIcon from '../assets/pcexpress.png';
+import Item from './Item.js';
+import {stripePromise} from '../App.js'
 
 // Probably want to sort dict alphabetically when pulling from db
 var tofu = {
@@ -39,6 +41,25 @@ const Checkout = () => {
         });
     }, [])
 
+    const handleClick = async (event) => {
+        const stripe = await stripePromise;
+
+        // Call your backend to create the Checkout Session
+        const response = await fetch('http://bb467e118e37.ngrok.io/checkout', { method: 'POST' })
+            .then((response) => response.json())
+            .then((session) => stripe.redirectToCheckout({ sessionId: session.id }))
+            .then((result) => {
+                // If `redirectToCheckout` fails due to a browser or network
+                // error, you should display the localized error message to your
+                // customer using `error.message`.
+                if (result.error) {
+                  alert(result.error.message);
+                }
+              })
+              .catch(function(error) {
+                console.error('Error:', error);
+              });
+    };
 
     useEffect(() => {
         // make sure userUID is obtained before data is retrieved
@@ -144,7 +165,7 @@ const Checkout = () => {
                 </div>
                 <div className="listViews">
                     <button className="actionButton">Send List Over Text</button>
-                    <button className="actionButton"> Make a Direct Payment</button>
+                    <button className="actionButton" onClick={handleClick}> Make a Direct Payment</button>
                     <button className="actionButton" onClick={() =>  window.location.href = "http://localhost:3000/main"}> Go back to main</button>
                 </div>
             </div>
