@@ -7,6 +7,8 @@ import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
 import loblawsIcon from '../assets/loblaws_icon.png'
 import pcExpressIcon from '../assets/pcexpress.png';
+import Item from './Item.js';
+import {stripePromise} from '../App.js'
 
 // Probably want to sort dict alphabetically when pulling from db
 var tofu = {
@@ -39,6 +41,26 @@ const Checkout = () => {
         });
     }, [])
 
+    const handleClick = async (event) => {
+        const stripe = await stripePromise;
+
+        // Call your backend to create the Checkout Session
+        const response = await fetch(' http://bb467e118e37.ngrok.io/checkout', { method: 'POST' });
+
+        const session = await response.json();
+
+        // When the customer clicks on the button, redirect them to Checkout.
+        const result = await stripe.redirectToCheckout({
+            sessionId: session.id,
+        });
+
+        if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer
+        // using `result.error.message`.
+            console.log(result.error.message);
+        }
+    };
 
     useEffect(() => {
         // make sure userUID is obtained before data is retrieved
@@ -130,7 +152,7 @@ const Checkout = () => {
                 </div>
                 <div className="listViews">
                     <button className="actionButton">Send List Over Text</button>
-                    <button className="actionButton"> Make a Direct Payment</button>
+                    <button className="actionButton" onClick={handleClick}> Make a Direct Payment</button>
                 </div>
             </div>
 
