@@ -51,7 +51,7 @@ button:focus {
     background-size: cover;
     position: relative;
     top: 0px;
-    height: 721px;
+    height: 100vh;
 }
 
 #info-col {
