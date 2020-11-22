@@ -9,7 +9,7 @@ import appIcon from '../assets/app_icon.svg';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import shoppingCart from '../assets/shopping-cart.png';
-import deleteIcon from '../assets/trash-icon.png'
+import deleteIcon from '../assets/trash-icon.png';
 import './ItemDescription.css';
 import './Checkout.css';
 
@@ -98,7 +98,9 @@ const Main = () => {
         <>
             <div className="mainDiv">
                 <div className="searchBar">
-                    <div className="icon" />
+                    <div className="icon" >
+                        <img className="appIcon" src={appIcon}/>
+                    </div>
                     <input className="searchField" value={searchQuery} onChange={event => setSearchQuery(event.target.value)} />
                     <img className="searchIcon" src={searchIcon} onClick={() => {
                         // Make request to backend here!
