@@ -13,7 +13,7 @@ const Main = () => {
               console.log("user" + user.uid)
               setUserUID(user.uid);
             } else {
-                window.location.href = "http://localhost:3000/"
+                window.location.href = "http://localhost:3000/register"
             }
         });
     }, [])

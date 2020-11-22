@@ -10,7 +10,7 @@ function App() {
     <main>
       <Switch>
         {/* Main page is register page for now */}
-        <Route path="/" component={Register} exact />
+        <Route path="/register" component={Register} exact />
         <Route path="/login" component={Login} exact />
         <Route path="/main" component={Main} exact />
       </Switch>

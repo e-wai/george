@@ -2,7 +2,7 @@ import GroceryCartIcon from '../assets/grocery_cart_icon.png';
 import './SignupModalComponent.css';
 import React from 'react';
 
-const link = <a href={"https://www.youtube.com/watch?v=fvjpE_wFL5A"}>Sign up</a>;
+const link = <a href={"https://www.youtube.com/watch?v=fvjpE_wFL5A"}>signup</a>;
 
 export default class SignupModalComponent extends React.Component {
     constructor(props) {
@@ -28,31 +28,33 @@ export default class SignupModalComponent extends React.Component {
 
     render() {
         return <div id='signup-modal'>
-            <div className='row'>
-                <div className='col' id='info-col'>
-                    <p className='title-text'>Product Name</p>
-                    <p className='info-text'>Find the best prices in one consolidated platform!</p>
-                    <img id='icon' alt='grocery-cart-icon' src={GroceryCartIcon}/>
-                </div>
-                <div className='col' id='signup-col'>
-                    <p className='info-text' id='sign-up-text'>Not a member? {link}</p>
-                    <div className='sign-up-content'>
-                        <form onSubmit={this.handleSubmit}>
-                            <label> 
-                                Email
-                                <br/>
-                                <input type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
-                            </label>
-                            <label>
-                                Password
-                                <br/>
-                                <input type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
-                            </label>
-                            <input type="submit" value="Log in" id='log-in-button'/>
-                        </form>
+                 <div className='mainBackground'>
+                    <div className='row'>
+                        <div className='col' id='info-col'>
+                            <p className='title-text'>Product Name</p>
+                            <p className='description-text'>Find the best prices in one consolidated platform!</p>
+                            <img id='icon' alt='grocery-cart-icon' src={GroceryCartIcon}/>
+                        </div>
+                        <div className='col' id='signup-col'>
+                            <p className='info-text' id='sign-up-text'>Not a member? {link}</p>
+                            <div className='sign-up-content'>
+                                <form onSubmit={this.handleSubmit}>
+                                    <label> 
+                                        Email
+                                        <br/>
+                                        <input className='textInput' type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
+                                    </label>
+                                    <label>
+                                        Password
+                                        <br/>
+                                        <input className='textInput' type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
+                                    </label>
+                                    <input type="submit" value="Login" id='log-in-button'/>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>;
+            </div>;
     }
 }
