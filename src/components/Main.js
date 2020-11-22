@@ -11,6 +11,7 @@ import Button from 'react-bootstrap/Button';
 import shoppingCart from '../assets/shopping-cart.png';
 import deleteIcon from '../assets/trash-icon.png'
 import './ItemDescription.css';
+import './Checkout.css';
 
 const Main = () => {    
     const [userUID, setUserUID] = useState("");
@@ -29,6 +30,7 @@ const Main = () => {
     // const closeModal = () => {
     //     setModalShow(false);
     // }
+    console.log(userData);
     useEffect(() => {
         fire.auth().onAuthStateChanged(user => {
             if (user) {
@@ -75,6 +77,7 @@ const Main = () => {
             );
     }, [baseURL])
 
+
     return (
         <>
             <div className="mainDiv">
@@ -93,16 +96,17 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            {/* {(userData.items == undefined || userData.items.length == 0) &&  
+
+            {(userData.items == undefined || userData.items.length == 0) &&  
                 <div className="placeholderContainer">
                     <img className="placeholderImage" src={shoppingCart}></img>
                     <div>
                         <p className="placeholderText">No items in shopping cart<br></br>Search for items to add them to your shopping list!</p>
                     </div>
                 </div>
-            }  */}
+            } 
             
-            {(userData.items == undefined /*&& userData.items.length >= 1*/) &&
+            {(userData.items != undefined && userData.items.length >= 1) &&
                 <div className="centeringContainer">
                     <div className="shoppingListCard">
                         <p className="shoppingListText">My Shopping List</p>
@@ -115,6 +119,7 @@ const Main = () => {
                                             <p className="shoppingItemText">Apples  <span>x5</span></p>
                                         </div>
                                         <img className="deleteIcon" src={deleteIcon}/>
+
 
                                         {/* <p className="shoppingItemText">{item.name}</p> */}
                                     </div>
