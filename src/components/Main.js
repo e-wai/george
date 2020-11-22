@@ -6,6 +6,7 @@ import './Main.css';
 import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
 import marketIcon from '../assets/shopping_cart-24px.svg';
+import appIcon from '../assets/app_icon.svg';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
@@ -62,7 +63,9 @@ const Main = () => {
         <div className="mainDiv">
             <h1>{makeListOfProductsQuery()}</h1>
             <div className="searchBar">
-                <div className="icon" />
+                <div className="appIconContainer" >
+                    <img className="appIcon" src={appIcon}/>
+                </div>
                 <input className="searchField" value={searchQuery} onChange={event => setSearchQuery(event.target.value)} />
                 <img className="searchIcon" src={searchIcon} onClick={() => {
                     // Make request to backend here!

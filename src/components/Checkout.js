@@ -27,8 +27,6 @@ var lettuce = {
 }
 const ITEMS = [tofu, kimchi, lettuce]
 
-
-   
 const Checkout = () => {
     const [userUID, setUserUID] = useState("");
     const [searchQuery, setSearchQuery] = useState("");

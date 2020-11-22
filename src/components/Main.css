@@ -21,17 +21,26 @@
     justify-content: center;
 }
 
-.icon {
-    width: 115px;
-    height: 115px;
+.appIconContainer {
+    width: 75px;
+    height: 75px;
 
     background: #C4C4C4;
-    border-radius: 100px;
+    border-radius: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appIcon {
+    width: 50px;
+    height: 50px;
 }
 
 .searchField {
     width: 1000px;
-    height: 70px;
+    height: 65px;
     font-size: 50px;
 
     background: #FBFBFB;
@@ -58,10 +67,10 @@
 
 .logoutContainer, .checkoutContainer {
     position: absolute;
-    width: 100px;
-    height: 100px; 
+    width: 75px;
+    height: 75px; 
 
-    border-radius: 100px;
+    border-radius: 75px;
     background: #FBFBFB;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 
@@ -75,13 +84,13 @@
 }
 
 .checkoutContainer {
-    right: 150px;
+    right: 120px;
 }
 
 
 .logoutIcon, .marketIcon {
-    width: 60px;
-    height: 60px; 
+    width: 50px;
+    height: 50px; 
 }
 
 .logoutContainer:hover, .searchIcon:hover, .marketIcon {
