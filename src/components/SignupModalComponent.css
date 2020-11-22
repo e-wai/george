@@ -245,6 +245,18 @@ label {
     text-align: center;
 }
 
+#redirect-button:hover {
+    background: #383A47;
+}
+
+#log-in-button:hover {
+    background: #383A47;
+}
+
+#register-button:hover {
+    background: #383A47;
+}
+
 #sign-up-text {
     text-align: right;
     font-family: 'Open Sans',serif;
