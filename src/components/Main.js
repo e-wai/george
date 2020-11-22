@@ -62,11 +62,11 @@ const Main = () => {
                         window.location.href = "http://localhost:3000/";
                     }} />
                 </div>
-
-                {/* <img src={logoutIcon}></img> */}
             </div>
 
             <div className="itemsContainer">
+                {/* Get number of items recieved from backend and map them here */}
+                {/* Pass in JSON object to Item.js */}
                 <Item />
                 <Item />
                 <Item />
