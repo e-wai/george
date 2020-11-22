@@ -80,10 +80,13 @@
 .listViews {
     display: flex;
     width: 960px;
-    flex-wrap: wrap;
     justify-content: space-between;
-    
 
+}
+
+.listViewsButtons {
+    display: flex;
+    flex-direction: column;
 }
 
 .listContainer {
@@ -135,7 +138,7 @@
     font-family: 'Open Sans',serif;
     font-size: 17.5px;
     cursor: pointer;
-    width: 450px;
+    width: 900px;
 }
 
 .actionButton:hover {
@@ -173,4 +176,8 @@
     line-height: 34px;
     /* identical to box height */
 
+}
+
+.paymentButton {
+    margin-top: 100px;
 }

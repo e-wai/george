@@ -164,9 +164,8 @@ const Checkout = () => {
                         
                     </div>
                 </div>
-                <div className="listViews">
-                    <button className="actionButton">Send List Over Text</button>
-                    <button className="actionButton" onClick={handleClick}> Make a Direct Payment to {showDiscount(2, 1) ? "Loblaws" : "PC Express"}</button>
+                <div className="listViewsButtons">
+                    <button className="actionButton paymentButton" onClick={handleClick}> Make a Direct Payment to {showDiscount(2, 1) ? "Loblaws" : "PC Express"}</button>
                     <button className="actionButton" onClick={() =>  window.location.href = "http://localhost:3000/main"}> Go back to main</button>
                 </div>
             </div>
