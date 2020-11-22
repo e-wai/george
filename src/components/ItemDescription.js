@@ -9,11 +9,35 @@ import plus from '../assets/plus.png';
 import minus from '../assets/minus.png';
 import plusGreen from '../assets/plusGreen.png';
 import minusGreen from '../assets/minusGreen.png';
+import fire from '../firebase.js';
+import * as admin from 'firebase-admin';
 
-const ItemDescription = ({show, onHide, data}) => {
-    console.log(data);
+const ItemDescription = ({show, onHide, data, user}) => {
 
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(1);
+    const usersRef = fire.firestore().collection('users')
+ 
+    const addToListClicked = () => {
+        const object = {
+            name: data['metro'].name,
+            image: data['metro'].image,
+            quantity: quantity,
+            price1: (parseFloat(data['metro'].price.replace('$', ''))*quantity).toFixed(2),
+            price2: (parseFloat(data['tnt'].price.replace('$', ''))*quantity).toFixed(2), 
+        }
+
+        usersRef.doc(user.id).get().then(documentSnapshot => {
+            const existingItems = documentSnapshot.data().items;
+            usersRef.doc(user.id).update({
+                items: [...existingItems, object]
+            }).catch(error => {
+                console.log(error);
+            })
+        })
+        onHide();
+
+    }
+
     return (
         <Modal
             contentClassName="modalContainer"
@@ -27,20 +51,20 @@ const ItemDescription = ({show, onHide, data}) => {
             <Modal.Header closeButton>
             </Modal.Header>
             <Modal.Body>
-                <img className="modalImage" src={data.image} />
-                <a className="modalText">{data.name}</a>
-                <div className={quantity > 0 ? "changeQuantityGreen" : "changeQuantity"}>
-                    <img className="minus" src={quantity > 0 ? minusGreen : minus} onClick={() => setQuantity(prev => {
-                        if(prev > 0){
+                <img className="modalImage" src={data['metro'].image} />
+                <a className="modalText">{data['metro'].name}</a>
+                <div className={quantity > 1 ? "changeQuantityGreen" : "changeQuantity"}>
+                    <img className="minus" src={quantity > 1 ? minusGreen : minus} onClick={() => setQuantity(prev => {
+                        if(prev > 1){
                             return prev-1;
                         } else {
                             return prev;
                         }
                     })}/>
                     <a className="quantity">{quantity}</a>
-                    <img className="plus" src={quantity > 0? plusGreen : plus}  onClick={() => setQuantity(prev => prev + 1 )}/>
+                    <img className="plus" src={quantity > 1 ? plusGreen : plus}  onClick={() => setQuantity(prev => prev + 1 )}/>
                 </div>
-                <div className="addToList" onClick={() => console.log("hi")}>
+                <div className="addToList" onClick={() => addToListClicked()}>
                     <img src={cartLogo} />
                     <a className="addToListFont">Add to List</a>
                 </div>
@@ -51,7 +75,7 @@ const ItemDescription = ({show, onHide, data}) => {
                         <img src={loblawsLogo} />
                     </div>
                     <div className="loblawsPrice">
-                        <a className="loblawsPriceFont">{data.price}</a>
+                        <a className="loblawsPriceFont">{"$"}{(parseFloat(data['metro'].price.replace('$', ''))*quantity).toFixed(2)}</a>
                     </div>
                 </div>
                 <div className="pcexpress">
@@ -59,12 +83,13 @@ const ItemDescription = ({show, onHide, data}) => {
                         <img className="pcexpressLogo" src={pcexpressLogo} />
                     </div>
                     <div className="pcexpressPrice">
-                        <a className="pcexpressPriceFont">{data.price}</a>
+                    <a className="pcexpressPriceFont">{"$"}{(parseFloat(data['tnt'].price.replace('$', ''))*quantity).toFixed(2)}</a>
                     </div>
                 </div>
             </Modal.Footer>
         </Modal>
     );
+    
 }
 
 export default ItemDescription;
