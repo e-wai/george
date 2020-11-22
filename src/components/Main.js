@@ -81,6 +81,18 @@ const Main = () => {
             );
     }, [baseURL])
 
+    const deleteClicked = (itemToDelete) => {
+        usersRef.doc(userData.id).get().then(documentSnapshot => {
+            const existingItems = documentSnapshot.data().items;
+            usersRef.doc(userData.id).update({
+                items: existingItems.filter(post => post.name !== itemToDelete)
+            }).then(() => {
+                window.location.href = "http://localhost:3000/main";
+            }).catch(error => {
+                console.log(error);
+            })
+        })
+    }
 
     return (
         <>
@@ -124,7 +136,7 @@ const Main = () => {
                                             <img className="shoppingItemPhoto" src={item.image}/> {/** Replace with actual photos */}
                                             <p className="shoppingItemText">{item.name}  <span>x{item.quantity}</span></p>
                                         </div>
-                                        <img className="deleteIcon" src={deleteIcon}/>
+                                        <img className="deleteIcon" onClick={() => deleteClicked(item.name)} src={deleteIcon}/>
 
 
                                         {/* <p className="shoppingItemText">{item.name}</p> */}
