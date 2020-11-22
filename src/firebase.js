@@ -7,8 +7,7 @@ const firebaseConfig = {
     projectId: "hackwestern7-f84f9",
     storageBucket: "hackwestern7-f84f9.appspot.com",
     messagingSenderId: "806434084198",
-    appId: "1:806434084198:web:b31da2d6c9ac42239da4a7"
-    
+    appId: "1:806434084198:web:b31da2d6c9ac42239da4a7"  
 };
 
 // Establishes connection with firebase

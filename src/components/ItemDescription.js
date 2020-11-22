@@ -10,7 +10,6 @@ import minus from '../assets/minus.png';
 import plusGreen from '../assets/plusGreen.png';
 import minusGreen from '../assets/minusGreen.png';
 import fire from '../firebase.js';
-import * as admin from 'firebase-admin';
 
 const ItemDescription = ({show, onHide, data, user}) => {
 
