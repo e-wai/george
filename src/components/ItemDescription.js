@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import './ItemDescription.css';
-import loblawsLogo from '../assets/image 1.png';
+import loblawsLogo from '../assets/loblaws_icon.png';
 import pcexpressLogo from '../assets/pcexpress.png';
 import cartLogo from '../assets/Group 17.png';
 import plus from '../assets/plus.png';

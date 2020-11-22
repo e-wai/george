@@ -12,10 +12,16 @@
 }
 
 .imageReceieved {
-    width: 80px;
-    height: 80px;
+    width: 104px;
+    height: 18px;
     /* top: 50%; */
     /* position: absolute; */
+}
+
+#pcExpressIcon {
+    height: 32px;
+    width: 96px;
+    margin-top: -.3em;
 }
 
 .itemText {
@@ -28,27 +34,60 @@
     margin-left: 10%;
 }
 
+.nameText {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #282828;
+}
+
 .priceText {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #282828;
+    text-align: right;
+}
+
+.totalPriceText {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #282828;
     text-align: right;
 }
 
 .centerView {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 55px;
+}
+
+.itemLabel {
+    width: 40%
 }
 
 .listViews {
     display: flex;
-    width: 80%;
+    width: 860px;
     justify-content: space-between;
+    
+
 }
 
 .listContainer {
-    background-color: aqua;
-    width: 35%;
-    border-radius: 3em;
+    position: relative;
+    background-color: white;
+    width: 400px;
+    border-radius: 1em;
     padding: 2em;
     padding-top: 0em;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.06);
+    /* shado */
 }
 
 .labelContainer {
@@ -57,6 +96,46 @@
     justify-content: space-between;
 }
 
-.itemLabel {
-    width: 40%
+
+.logoWrapper {
+    background-color: white;
+    padding-top: 1em;
+    margin-left: -2em;
+    margin-right: -2em;
+    margin-bottom: 30px;
+    border-radius: 1em 1em 0em 0em;
+    height: 50px;
+    display: flex;
+    justify-content: center;
 }
+
+.totalPriceContainer {
+    margin-top: 2em;
+    margin-bottom: -1.5em;
+}
+
+.actionButton { 
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    /* width: 90%; */
+    color: #ffffff;
+    background: #4A4E69;
+    box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2em;
+    border: 10px #FFFFFF;
+    font-family: 'Open Sans',serif;
+    font-size: 17.5px;
+    cursor: pointer;
+    width: 400px;
+}
+
+#blueWrapper {
+    background-color: #0071CE;
+}
+
+#blackWrapper {
+    background-color: #000000;
+}
+
