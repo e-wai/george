@@ -4,6 +4,7 @@ import Register from './components/Register.js';
 import Login from './components/Login.js';
 import Main from './components/Main.js';
 import Intro from './components/Intro.js';
+import Checkout from './components/Checkout.js';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" component={Login} exact />
         <Route path="/main" component={Main} exact />
         <Route path="/intro" component={Intro} exact />
+        <Route path="/checkout" component={Checkout} exact />
       </Switch>
     </main>
   );

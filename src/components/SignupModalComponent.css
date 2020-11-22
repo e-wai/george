@@ -160,7 +160,8 @@ button:focus {
 
 .title-text {
     color: black;
-    font-size: larger;
+    font-size: 30px;
+    font-weight: 600;
     position: relative;
     top: 2%;
 }

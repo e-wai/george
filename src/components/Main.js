@@ -12,6 +12,7 @@ const Main = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [message, setServerMessage] = useState("");
     const usersRef = fire.firestore().collection('users')
+    
 
     useEffect(() => {
         fire.auth().onAuthStateChanged(user => {
@@ -48,6 +49,7 @@ const Main = () => {
                 (result) => {
                     setServerMessage(result[0]['link']);
                     console.log(result[0]['link']);
+                    console.log(result)
                 },
                 (error) => console.log(error)
             )
@@ -89,6 +91,7 @@ const Main = () => {
                 <Item />
             </div>
  
+            <a href={"http://localhost:3000/Checkout"}>login</a>                    
 
 
         </div>
