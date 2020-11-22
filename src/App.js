@@ -17,11 +17,10 @@ function App() {
     <main>
       <Switch>
         {/* Main page is register page for now */}
-        <Route path="/" component={Register} exact />
+        <Route path="/" component={Intro} exact />
         <Route path="/register" component={Register} exact />
         <Route path="/login" component={Login} exact />
         <Route path="/main" component={Main} exact />
-        <Route path="/intro" component={Intro} exact />
         <Route path="/checkout" component={Checkout} key={document.location.href} exact />
         <Route path="/success" component={Success} exact />
         <Route path="/failure" component={Failure} exact />
