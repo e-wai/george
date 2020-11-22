@@ -18,13 +18,14 @@ var tofu = {
 
 const ITEMS = [tofu]
 
+
+   
 const Checkout = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
     const [userData, setUserData] = useState(ITEMS);
     const [totalPrice1, setTotalPrice1] = useState(0);
     const [totalPrice2, setTotalPrice2] = useState(0);
-    const [phoneNumber, setPhoneNumber] = useState("");
     const [userUID, setUserUID] = useState("");
     const currentUser = fire.auth().currentUser;
     const usersRef = fire.firestore().collection('users')
@@ -69,14 +70,12 @@ const Checkout = () => {
                     return;
                 } else {
                     setUserData(userReturned.data().items);
-                    setPhoneNumber(userReturned.data().phone_number);
                 }
             })
         }
 
     }, [userUID])
 
-    console.log(phoneNumber);
     const calculateTotal = (decision) => {
         var sum = 0;
         if(decision == 1) {
