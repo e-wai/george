@@ -10,6 +10,7 @@ const Main = () => {
     const [userUID, setUserUID] = useState("");
     const [userData, setUserData] = useState({});
     const [searchQuery, setSearchQuery] = useState("");
+    const [message, setServerMessage] = useState("");
     const usersRef = fire.firestore().collection('users')
 
     useEffect(() => {
@@ -39,9 +40,23 @@ const Main = () => {
 
     }, [userUID])
 
+    function makeListOfProductsQuery() {
+        const BASE_URL = "http://bb467e118e37.ngrok.io/products?item_name=orange"
+        fetch(BASE_URL)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    setServerMessage(result[0]['link']);
+                    console.log(result[0]['link']);
+                },
+                (error) => console.log(error)
+            )
+        return message;
+    }
 
     return (
         <div className="mainDiv">
+            <h1>{makeListOfProductsQuery()}</h1>
             <div className="searchBar">
                 <div className="icon" />
                 <input className="searchField" value={searchQuery} onChange={event => setSearchQuery(event.target.value)} />
