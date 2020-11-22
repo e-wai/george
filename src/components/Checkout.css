@@ -24,6 +24,12 @@
     margin-top: -.3em;
 }
 
+#loblawsIcon {
+    height: 30px;
+    width: 140px;
+    margin-top: -.3em;
+}
+
 .itemText {
     font-family: Open Sans;
     font-style: normal;

@@ -4,7 +4,9 @@ import ItemDescription from './ItemDescription.js';
 import './Main.css';
 import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
+
 import './ItemDescription.css';
+import './Checkout.css';
 
 const Main = () => {    
     const [userUID, setUserUID] = useState("");
@@ -17,7 +19,7 @@ const Main = () => {
     
 
     const [modalShow, setModalShow] = useState(false);
-    
+
     // const closeModal = () => {
     //     setModalShow(false);
     // }
@@ -67,6 +69,7 @@ const Main = () => {
             );
     }, [baseURL])
 
+
     return (
         <>
             <div className="mainDiv">
@@ -85,7 +88,10 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <a href={"http://localhost:3000/Checkout"}>login</a>      
+            <a onClick={() => {
+                window.location.href = "http://localhost:3000/checkout";
+            }}>Checkout</a>      
+
             {modalShow ? <ItemDescription show={modalShow} onHide={() => setModalShow(false)} data={searchData} user={userData} /> : null}
         </>
 

@@ -16,7 +16,7 @@ function App() {
         <Route path="/login" component={Login} exact />
         <Route path="/main" component={Main} exact />
         <Route path="/intro" component={Intro} exact />
-        <Route path="/checkout" component={Checkout} exact />
+        <Route path="/checkout" component={Checkout} key={document.location.href} exact />
       </Switch>
     </main>
   );
