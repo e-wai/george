@@ -50,8 +50,8 @@ const Register = () => {
             <div class="mainBackground">
                 <div className='row-reg'>
                     <div className='col' id='info-col'>
-                        <p className='title-text'>Product Name</p>
-                        <p className='description-text'>Find the best prices in one consolidated platform!</p>
+                        <p className='title-text'>G.e.o.r.g.e</p>
+                        <p className='description-text'>Find the best grocery prices in one consolidated platform and make an order with the click of a button!</p>
                         <img id='icon' alt='grocery-cart-icon' src={GroceryCartIcon}/>
                     </div>
                     <div className='col' id='signup-col'>

@@ -64,6 +64,7 @@ button:focus {
 
 #info-col > p {
     margin-left: 10%;
+    margin-top: 4%;
     font-family: 'Open Sans',serif;
 }
 
@@ -165,6 +166,7 @@ button:focus {
     font-weight: 600;
     position: relative;
     top: 2%;
+    font-family: 'Open Sans',serif;
 }
 
 .info-text {
