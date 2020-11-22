@@ -49,8 +49,8 @@ const Main = () => {
             .then(res => res.json())
             .then(
                 (result) => {
-                    setServerMessage(result[0]['link']);
-                    console.log(result[0]['link']);
+                    setServerMessage(result['tnt'][0]['image']);
+                    // console.log(result[0]['link']);
                 },
                 (error) => console.log(error)
             )
