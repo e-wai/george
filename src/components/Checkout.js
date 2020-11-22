@@ -127,6 +127,7 @@ const Checkout = () => {
                 </div>
             </div> */}
             <div className="centerView">
+                <h1 id="checkoutTitle">Checkout and Compare</h1>
                 <div className="listViews">
                     <div className="listContainer">
                         <div className="logoWrapper" id="blueWrapper">

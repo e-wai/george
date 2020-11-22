@@ -18,6 +18,13 @@
     /* position: absolute; */
 }
 
+#checkoutTitle { 
+    font-family: Open Sans;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5vh;
+}
+
 #pcExpressIcon {
     height: 32px;
     width: 96px;
@@ -79,9 +86,8 @@
 
 .listViews {
     display: flex;
-    width: 960px;
+    width: 80%;
     justify-content: space-between;
-
 }
 
 .listViewsButtons {
@@ -94,6 +100,7 @@
     background-color: white;
     width: 450px;
     border-radius: 1em;
+    margin: 1em;
     padding: 2em;
     padding-top: 0em;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.06);
@@ -125,10 +132,9 @@
 }
 
 .actionButton { 
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    margin-top: 3vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     /* width: 90%; */
     color: #ffffff;
     background: #4A4E69;
@@ -138,7 +144,7 @@
     font-family: 'Open Sans',serif;
     font-size: 17.5px;
     cursor: pointer;
-    width: 900px;
+    width: 80vw;
 }
 
 .actionButton:hover {
