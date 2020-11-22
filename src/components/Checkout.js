@@ -45,21 +45,20 @@ const Checkout = () => {
         const stripe = await stripePromise;
 
         // Call your backend to create the Checkout Session
-        const response = await fetch(' http://bb467e118e37.ngrok.io/checkout', { method: 'POST' });
-
-        const session = await response.json();
-
-        // When the customer clicks on the button, redirect them to Checkout.
-        const result = await stripe.redirectToCheckout({
-            sessionId: session.id,
-        });
-
-        if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `result.error.message`.
-            console.log(result.error.message);
-        }
+        const response = await fetch('http://bb467e118e37.ngrok.io/checkout', { method: 'POST' })
+            .then((response) => response.json())
+            .then((session) => stripe.redirectToCheckout({ sessionId: session.id }))
+            .then((result) => {
+                // If `redirectToCheckout` fails due to a browser or network
+                // error, you should display the localized error message to your
+                // customer using `error.message`.
+                if (result.error) {
+                  alert(result.error.message);
+                }
+              })
+              .catch(function(error) {
+                console.error('Error:', error);
+              });
     };
 
     useEffect(() => {
