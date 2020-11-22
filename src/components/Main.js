@@ -6,8 +6,7 @@ import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
 import marketIcon from '../assets/shopping_cart-24px.svg';
 
-const Main = () => {
-    
+const Main = () => {    
     const [userUID, setUserUID] = useState("");
     const [userData, setUserData] = useState({});
     const [searchQuery, setSearchQuery] = useState("");
