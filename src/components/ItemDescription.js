@@ -31,7 +31,7 @@ const ItemDescription = ({show, onHide, data, user}) => {
             usersRef.doc(user.id).update({
                 items: [...existingItems, object]
             }).then(() => {
-                window.location.href = "http://localhost:3000/main";
+                window.location.href = "https://e-wai.github.io/george/main";
             }).catch(error => {
                 console.log(error);
             })

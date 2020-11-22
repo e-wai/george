@@ -36,7 +36,7 @@ const Checkout = () => {
               console.log("user" + user.uid)
               setUserUID(user.uid);
             } else {
-                window.location.href = "http://localhost:3000/register"
+                window.location.href = "https://e-wai.github.io/george/register"
             }
         });
     }, [])
@@ -122,7 +122,7 @@ const Checkout = () => {
                 <div className="logoutContainer">
                     <img className="logoutIcon" src={logoutIcon} onClick={() => {
                         fire.auth().signOut().then(() => alert('User signed out!'));
-                        window.location.href = "http://localhost:3000/";
+                        window.location.href = "https://e-wai.github.io/george/";
                     }} />
                 </div>
             </div> */}
@@ -177,7 +177,7 @@ const Checkout = () => {
                 </div>
                 <div className="listViewsButtons">
                     <button className="actionButton paymentButton" onClick={handleClick}> Make a Direct Payment to {showDiscount(2, 1) ? "Loblaws" : "PC Express"}</button>
-                    <button className="actionButton" onClick={() =>  window.location.href = "http://localhost:3000/main"}> Go back to main</button>
+                    <button className="actionButton" onClick={() =>  window.location.href = "https://e-wai.github.io/george/main"}> Go back to main</button>
                 </div>
             </div>
 

@@ -11,8 +11,8 @@ const Intro = () => {
                                 <p className='title-text'>G.e.o.r.g.e</p>
                                 <p className='description-text'>Find the best grocery prices in one consolidated platform and make an order with the click of a button! G.e.o.r.g.e will automatically price match your grocery list and generate the cheapest one for you!</p>
                             </div>
-                            <a href="http://localhost:3000/register" id='redirect-button'>Register</a>
-                            <a href="http://localhost:3000/login" id='redirect-button'>Login</a>
+                            <a href="https://e-wai.github.io/george/register" id='redirect-button'>Register</a>
+                            <a href="https://e-wai.github.io/george/login" id='redirect-button'>Login</a>
                         </div>
                         <div className='col' id='signup-col-intro'>
                             <div className='sign-up-content'>
