@@ -100,7 +100,7 @@ const Checkout = () => {
                     </div>
                     <div className="listContainer">
                         <div className="logoWrapper" id="blackWrapper">
-                            <img className="imageReceieved" src={loblawsIcon} /> {/* Change to the loblaws/t&t logo*/}
+                            <img className="imageReceieved" id="loblawsIcon" src={loblawsIcon} /> {/* Change to the loblaws/t&t logo*/}
                         </div>
                         {
                             ITEMS.map(item => (

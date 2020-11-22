@@ -96,3 +96,116 @@
 .logoutContainer:hover, .searchIcon:hover, .marketIcon {
     cursor: pointer;
 }
+
+.placeholderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.placeholderImage {
+    margin-bottom: 2em;
+    height: 300px;
+    width: 300px;
+}
+
+.placeholderText {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    color: #282828;
+    text-align: center;
+}
+
+.centeringContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.summaryButton { 
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    /* width: 90%; */
+    color: #ffffff;
+    background: #4A4E69;
+    box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2em;
+    border: 10px #FFFFFF;
+    font-family: 'Open Sans',serif;
+    font-size: 17.5px;
+    cursor: pointer;
+    width: 450px;
+    text-align: center;
+    text-emphasis-color: white;
+    text-emphasis: none;
+    text-decoration: none!;
+}
+
+.summaryButton:hover {
+    background: #383A47;
+    color: white;
+    text-decoration: none;
+}
+
+.shoppingListCard {
+    margin-top: 6em;
+    background-color: white;
+    border-radius: .8em;
+    padding: 1em;
+}
+
+.shoppingItemPhoto {
+    height: 20px;
+    width: 20px;
+}
+
+.shoppingListContainer {
+    width: 800px;
+    display: grid;
+    /* grid-gap: 50px; */
+    grid-template-columns: 400px 400px;
+    margin-bottom: 6em;
+}
+
+.shoppingItemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #F4F4F4;
+    margin-top: .5em;
+    margin-left: 0.7em;
+    margin-right: .7em;
+    padding: 0.3em;
+    padding-right: 1em;
+    border-radius: .8em;
+}
+
+.shoppingItemNameContainer {
+    display: flex;
+    align-items: center;
+    padding: 1em
+}
+
+.shoppingItemText {
+    margin: 0;
+    margin-left: 1em;
+}
+
+.shoppingListText {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.deleteIcon {
+    width: 20px;
+    height: 20px;
+}
+
