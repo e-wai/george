@@ -16,6 +16,7 @@ import './Checkout.css';
 const Main = () => {    
     const [userUID, setUserUID] = useState("");
     const [userData, setUserData] = useState({});
+    
     const [searchQuery, setSearchQuery] = useState("");
     const [searchData , setSearchData] = useState({});
     const [baseURL, setBaseURL] = useState("");
@@ -26,6 +27,8 @@ const Main = () => {
     const [modalShow, setModalShow] = useState(false);
     
     let randomArray = ["testing", "replace", "with", "userData", "items"]
+
+    const [userItems, setUserItems] = useState(randomArray);
 
     // const closeModal = () => {
     //     setModalShow(false);
@@ -52,6 +55,7 @@ const Main = () => {
                     return;
                 } else {
                     setUserData(userReturned.data());
+                    setUserItems(userReturned.data().items);
                 }
             })
         }
@@ -112,11 +116,11 @@ const Main = () => {
                         <p className="shoppingListText">My Shopping List</p>
                         <div className="shoppingListContainer">
                             {/* {userData.items.map(item => ( */}
-                            {randomArray.map(item => (
+                            {userItems.map(item => (
                                     <div className="shoppingItemContainer">
                                         <div className="shoppingItemNameContainer">
-                                            <img className="shoppingItemPhoto" src={shoppingCart}/> {/** Replace with actual photos */}
-                                            <p className="shoppingItemText">Apples  <span>x5</span></p>
+                                            <img className="shoppingItemPhoto" src={item.image}/> {/** Replace with actual photos */}
+                                            <p className="shoppingItemText">{item.name}  <span>x{item.quantity}</span></p>
                                         </div>
                                         <img className="deleteIcon" src={deleteIcon}/>
 
