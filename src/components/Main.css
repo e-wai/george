@@ -209,3 +209,6 @@
     height: 20px;
 }
 
+.deleteIcon:hover {
+    cursor: pointer;
+}
