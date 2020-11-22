@@ -93,6 +93,7 @@
 .listViewsButtons {
     display: flex;
     flex-direction: column;
+    margin-bottom: 55px;
 }
 
 .listContainer {
@@ -185,5 +186,5 @@
 }
 
 .paymentButton {
-    margin-top: 100px;
+    margin-top: 30px;
 }
