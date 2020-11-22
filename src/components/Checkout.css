@@ -13,7 +13,7 @@
 
 .imageReceieved {
     width: 104px;
-    height: 18px;
+    height: 20px;
     /* top: 50%; */
     /* position: absolute; */
 }
@@ -79,8 +79,8 @@
 
 .listViews {
     display: flex;
+    width: 960px;
     flex-wrap: wrap;
-    width: 860px;
     justify-content: space-between;
     
 
@@ -89,7 +89,7 @@
 .listContainer {
     position: relative;
     background-color: white;
-    width: 400px;
+    width: 450px;
     border-radius: 1em;
     padding: 2em;
     padding-top: 0em;
@@ -135,7 +135,11 @@
     font-family: 'Open Sans',serif;
     font-size: 17.5px;
     cursor: pointer;
-    width: 400px;
+    width: 450px;
+}
+
+.actionButton:hover {
+    background: #383A47;
 }
 
 #blueWrapper {

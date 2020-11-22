@@ -30,12 +30,14 @@ const ItemDescription = ({show, onHide, data, user}) => {
             const existingItems = documentSnapshot.data().items;
             usersRef.doc(user.id).update({
                 items: [...existingItems, object]
+            }).then(() => {
+                window.location.href = "http://localhost:3000/main";
             }).catch(error => {
                 console.log(error);
             })
         })
         onHide();
-
+        
     }
 
     return (

@@ -4,13 +4,19 @@ import ItemDescription from './ItemDescription.js';
 import './Main.css';
 import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
-
+import marketIcon from '../assets/shopping_cart-24px.svg';
+import appIcon from '../assets/app_icon.svg';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import shoppingCart from '../assets/shopping-cart.png';
+import deleteIcon from '../assets/trash-icon.png'
 import './ItemDescription.css';
 import './Checkout.css';
 
 const Main = () => {    
     const [userUID, setUserUID] = useState("");
     const [userData, setUserData] = useState({});
+    
     const [searchQuery, setSearchQuery] = useState("");
     const [searchData , setSearchData] = useState({});
     const [baseURL, setBaseURL] = useState("");
@@ -19,6 +25,10 @@ const Main = () => {
     
 
     const [modalShow, setModalShow] = useState(false);
+    
+    let randomArray = ["testing", "replace", "with", "userData", "items"]
+
+    const [userItems, setUserItems] = useState(randomArray);
 
     // const closeModal = () => {
     //     setModalShow(false);
@@ -45,6 +55,7 @@ const Main = () => {
                     return;
                 } else {
                     setUserData(userReturned.data());
+                    setUserItems(userReturned.data().items);
                 }
             })
         }
@@ -89,15 +100,45 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <a onClick={() => {
-                window.location.href = "http://localhost:3000/checkout";
-            }}>Checkout</a>      
 
+            {(userData.items == undefined || userData.items.length == 0) &&  
+                <div className="placeholderContainer">
+                    <img className="placeholderImage" src={shoppingCart}></img>
+                    <div>
+                        <p className="placeholderText">No items in shopping cart<br></br>Search for items to add them to your shopping list!</p>
+                    </div>
+                </div>
+            } 
+            
+            {(userData.items != undefined && userData.items.length >= 1) &&
+                <div className="centeringContainer">
+                    <div className="shoppingListCard">
+                        <p className="shoppingListText">My Shopping List</p>
+                        <div className="shoppingListContainer">
+                            {/* {userData.items.map(item => ( */}
+                            {userItems.map(item => (
+                                    <div className="shoppingItemContainer">
+                                        <div className="shoppingItemNameContainer">
+                                            <img className="shoppingItemPhoto" src={item.image}/> {/** Replace with actual photos */}
+                                            <p className="shoppingItemText">{item.name}  <span>x{item.quantity}</span></p>
+                                        </div>
+                                        <img className="deleteIcon" src={deleteIcon}/>
+
+
+                                        {/* <p className="shoppingItemText">{item.name}</p> */}
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <a className="summaryButton" href="http://localhost:3000/Checkout">Show Me The Best Price</a>
+
+                    {/* <input type="button" onclick="window.location.href='http://localhost:3000/Checkout';" className="summaryButton">Show Me The Best Price</input>       */}
+
+                </div>
+            } 
             {modalShow ? <ItemDescription show={modalShow} onHide={() => setModalShow(false)} data={searchData} user={userData} /> : null}
         </>
-
-                          
-
     );
 
 
