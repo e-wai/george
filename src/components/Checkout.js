@@ -16,8 +16,6 @@ var tofu = {
 
 const ITEMS = [tofu]
 
-
-   
 const Checkout = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
