@@ -5,7 +5,7 @@ import './Main.css';
 import searchIcon from '../assets/search-24px.png';
 import logoutIcon from '../assets/logout.png';
 import marketIcon from '../assets/shopping_cart-24px.svg';
-import appIcon from '../assets/app_icon.svg';
+import appIcon from '../assets/shopping_bag_icon.svg';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import shoppingCart from '../assets/shopping-cart.png';
