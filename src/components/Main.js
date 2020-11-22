@@ -23,6 +23,7 @@ const Main = () => {
     // const closeModal = () => {
     //     setModalShow(false);
     // }
+    console.log(userData);
     useEffect(() => {
         fire.auth().onAuthStateChanged(user => {
             if (user) {

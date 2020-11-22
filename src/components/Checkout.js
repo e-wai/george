@@ -69,10 +69,21 @@ const Checkout = () => {
         return sum;
     }
 
+    const showDiscount = (store, otherStore) => {
+        if(calculateTotal(store)-calculateTotal(otherStore) < 0) {
+           return (
+            <div className="discountTag">
+                <a className="discountTagText">Saved ${Math.abs(calculateTotal(store)-calculateTotal(otherStore)).toFixed(2)}</a>
+            </div>
+           );
+
+        }
+    }
+
     return (
         <>
         <div className="mainDiv">
-            <div className="searchBar">
+            {/* <div className="searchBar">
                 <div className="icon"/>
                 <input className="searchField" value={searchQuery} onChange={event => setSearchQuery(event.target.value)} />
 
@@ -82,7 +93,7 @@ const Checkout = () => {
                         window.location.href = "http://localhost:3000/";
                     }} />
                 </div>
-            </div>
+            </div> */}
             <div className="centerView">
                 <div className="listViews">
                     <div className="listContainer">
@@ -103,8 +114,9 @@ const Checkout = () => {
                         }
                         <div className="totalPriceContainer">
                                 {/* <p className="totalPriceText">{totalPrice1}</p> */}
-                                <p className="totalPriceText"><span>Total: $</span>{calculateTotal(1)}</p>
+                                <p className="totalPriceText"><span>Total: $</span>{calculateTotal(1).toFixed(2)}</p>
                         </div>
+                        <div>{showDiscount(1, 2)}</div>
                     </div>
                     <div className="listContainer">
                         <div className="logoWrapper" id="blackWrapper">
@@ -124,15 +136,16 @@ const Checkout = () => {
                         }
                         <div className="totalPriceContainer">
                                 {/* <p className="totalPriceText">{items_price}</p> */}
-                                <p className="totalPriceText"><span>Total: $</span>{calculateTotal(2)}</p>
+                                <p className="totalPriceText"><span>Total: $</span>{calculateTotal(2).toFixed(2)}</p>
                         </div>
-                        <div>{calculateTotal(1)-calculateTotal(2)}</div>
+                        <div>{showDiscount(2, 1)}</div>
                         
                     </div>
                 </div>
                 <div className="listViews">
                     <button className="actionButton">Send List Over Text</button>
                     <button className="actionButton"> Make a Direct Payment</button>
+                    <button className="actionButton" onClick={() =>  window.location.href = "http://localhost:3000/main"}> Go back to main</button>
                 </div>
             </div>
 
