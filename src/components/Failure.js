@@ -16,7 +16,7 @@ const Failure = () => {
             <Main/>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Order Fialed</Modal.Title>
+                    <Modal.Title>Order Failed</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>

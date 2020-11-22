@@ -44,8 +44,18 @@ const Checkout = () => {
     const handleClick = async (event) => {
         const stripe = await stripePromise;
 
+        var price = calculateTotal(1) < calculateTotal(2) ? calculateTotal(1) : calculateTotal(2);
+       
         // Call your backend to create the Checkout Session
-        const response = await fetch('http://bb467e118e37.ngrok.io/checkout', { method: 'POST' })
+        const response = await fetch('http://bb467e118e37.ngrok.io/checkout', 
+            { 
+                method: 'POST', 
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({'price': price * 100}) 
+            })
             .then((response) => response.json())
             .then((session) => stripe.redirectToCheckout({ sessionId: session.id }))
             .then((result) => {
