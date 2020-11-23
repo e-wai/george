@@ -12,7 +12,7 @@ const Login = () => {
     useEffect(() => {
         fire.auth().onAuthStateChanged(user => {
             if (user) {
-                window.location.href = "https://e-wai.github.io/george/main"
+                window.location.href = "https://e-wai.github.io/george/#/main"
             } 
         });
     }, [])
@@ -31,7 +31,7 @@ const Login = () => {
                         alert("Please check your credentials and try again.")
                         return;
                     }
-                    window.location.href = "https://e-wai.github.io/george/main";
+                    window.location.href = "https://e-wai.github.io/george/#/main";
                 })
          }).catch(error => {
              alert(error);
@@ -65,7 +65,7 @@ const Login = () => {
                         <img id='icon' alt='grocery-cart-icon' src={GroceryCartIcon}/>
                     </div>
                     <div className='col' id='signup-col'>
-                        <p className='info-text' id='sign-up-text'>Not a member? {<a href={"https://e-wai.github.io/george/register"}>signup</a>}</p>
+                        <p className='info-text' id='sign-up-text'>Not a member? {<a href={"https://e-wai.github.io/george/#/register"}>signup</a>}</p>
                         <div className='sign-up-content'>
                             <label> 
                                 Email

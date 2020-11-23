@@ -18,7 +18,7 @@ var tofu = {
 
 const ITEMS = [tofu]
 
-
+const BACKEND_URL = 'http://bb467e118e37.ngrok.io/checkout';
    
 const Checkout = () => {
 
@@ -36,7 +36,7 @@ const Checkout = () => {
               console.log("user" + user.uid)
               setUserUID(user.uid);
             } else {
-                window.location.href = "https://e-wai.github.io/george/register"
+                window.location.href = "https://e-wai.github.io/george/#/register"
             }
         });
     }, [])
@@ -47,7 +47,7 @@ const Checkout = () => {
         var price = calculateTotal(1) < calculateTotal(2) ? calculateTotal(1) : calculateTotal(2);
        
         // Call your backend to create the Checkout Session
-        const response = await fetch('http://bb467e118e37.ngrok.io/checkout', 
+        const response = await fetch(BACKEND_URL, 
             { 
                 method: 'POST', 
                 headers: {
@@ -122,7 +122,7 @@ const Checkout = () => {
                 <div className="logoutContainer">
                     <img className="logoutIcon" src={logoutIcon} onClick={() => {
                         fire.auth().signOut().then(() => alert('User signed out!'));
-                        window.location.href = "https://e-wai.github.io/george/";
+                        window.location.href = "https://e-wai.github.io/george/#/";
                     }} />
                 </div>
             </div> */}
@@ -177,7 +177,7 @@ const Checkout = () => {
                 </div>
                 <div className="listViewsButtons">
                     <button className="actionButton paymentButton" onClick={handleClick}> Make a Direct Payment to {showDiscount(2, 1) ? "Loblaws" : "PC Express"}</button>
-                    <button className="actionButton" onClick={() =>  window.location.href = "https://e-wai.github.io/george/main"}> Go back to main</button>
+                    <button className="actionButton" onClick={() =>  window.location.href = "https://e-wai.github.io/george/#/main"}> Go back to main</button>
                 </div>
             </div>
 

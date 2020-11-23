@@ -7,7 +7,7 @@ const Failure = () => {
     const [show, setModalVisible] = useState(true);
 
     const handleClose = () => {
-        window.location.href = "https://e-wai.github.io/george/main";
+        window.location.href = "https://e-wai.github.io/george/#/main";
         setModalVisible(false);
     }
 

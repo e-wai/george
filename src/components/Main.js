@@ -40,7 +40,7 @@ const Main = () => {
               console.log("user" + user.uid)
               setUserUID(user.uid);
             } else {
-                window.location.href = "https://e-wai.github.io/george/register"
+                window.location.href = "https://e-wai.github.io/george/#/register"
             }
         });
     }, [])
@@ -87,7 +87,7 @@ const Main = () => {
             usersRef.doc(userData.id).update({
                 items: existingItems.filter(post => post.name !== itemToDelete)
             }).then(() => {
-                window.location.href = "https://e-wai.github.io/george/main";
+                window.location.href = "https://e-wai.github.io/george/#/main";
             }).catch(error => {
                 console.log(error);
             })
@@ -109,7 +109,7 @@ const Main = () => {
                     <div className="logoutContainer">
                         <img className="logoutIcon" src={logoutIcon} onClick={() => {
                             fire.auth().signOut().then(() => alert('User signed out!'));
-                            window.location.href = "https://e-wai.github.io/george/";
+                            window.location.href = "https://e-wai.github.io/george/#/";
                         }} />
                     </div>
                 </div>
@@ -145,9 +145,9 @@ const Main = () => {
                             }
                         </div>
                     </div>
-                    <a className="summaryButton" href="https://e-wai.github.io/george/Checkout">Show Me The Best Price</a>
+                    <a className="summaryButton" href="https://e-wai.github.io/george/#/Checkout">Show Me The Best Price</a>
 
-                    {/* <input type="button" onclick="window.location.href='https://e-wai.github.io/george/Checkout';" className="summaryButton">Show Me The Best Price</input>       */}
+                    {/* <input type="button" onclick="window.location.href='https://e-wai.github.io/george/#/Checkout';" className="summaryButton">Show Me The Best Price</input>       */}
 
                 </div>
             } 

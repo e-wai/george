@@ -14,7 +14,7 @@ const Register = () => {
     // useEffect(() => {
     //     fire.auth().onAuthStateChanged(user => {
     //         if (user) {
-    //             window.location.href = "https://e-wai.github.io/george/main"
+    //             window.location.href = "https://e-wai.github.io/george/#/main"
     //         } 
     //     });
     // }, [])
@@ -37,7 +37,7 @@ const Register = () => {
             const usersRef = fire.firestore().collection('users');
             usersRef.doc(uid).set(data).then(() => {
                 // Go to main page once user is registered
-                window.location.href = "https://e-wai.github.io/george/main";
+                window.location.href = "https://e-wai.github.io/george/#/main";
                 alert("Register complete.");
             }).catch(error => {
                 alert(error)
@@ -55,7 +55,7 @@ const Register = () => {
                         <img id='icon' alt='grocery-cart-icon' src={GroceryCartIcon}/>
                     </div>
                     <div className='col' id='signup-col'>
-                        <p className='info-text' id='sign-up-text'>Already a member? {<a href={"https://e-wai.github.io/george/login"}>login</a>}</p>
+                        <p className='info-text' id='sign-up-text'>Already a member? {<a href={"https://e-wai.github.io/george/#/login"}>login</a>}</p>
                         <div className='sign-up-grid-content'>
                             <label className='label1'> 
                                 Email
@@ -111,7 +111,7 @@ const Register = () => {
 
         //     <button onClick={() => registerClicked()}>Register</button>
         //     <button onClick={() => {
-        //         window.location.href = "https://e-wai.github.io/george/login"
+        //         window.location.href = "https://e-wai.github.io/george/#/login"
         //     }}>
         //         Login
         //     </button>

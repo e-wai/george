@@ -20,7 +20,7 @@ const Success = () => {
               console.log("user" + user.uid)
               setUserUID(user.uid);
             } else {
-                window.location.href = "https://e-wai.github.io/george/register"
+                window.location.href = "https://e-wai.github.io/george/#/register"
             }
         });
     }, [])
@@ -46,7 +46,7 @@ const Success = () => {
             usersRef.doc(userData.id).update({
                 items: []
             }).then(() => {
-                window.location.href = "https://e-wai.github.io/george/main";
+                window.location.href = "https://e-wai.github.io/george/#/main";
             }).catch(error => {
                 console.log(error);
             })
