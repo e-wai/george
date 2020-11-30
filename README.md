@@ -1,6 +1,9 @@
-# G.e.o.r.g.e. (Hack Western 2020 - 3rd overall out of 103 teams)
+# G.e.o.r.g.e. 
+### Hack Western 2020 - 3rd overall out of 103 teams
 
 Welcome to the G.e.o.r.g.e. repository! G.e.o.r.g.e. is a web application built to help users compare and order groceries at a single, convenient point. 
+
+![Landing page screenshot](https://github.com/e-wai/george/blob/main/screenshots/landing_page.PNG)
 
 ## About the project
 
@@ -14,3 +17,7 @@ This project was created for Hack Western 2020! We wanted to make life easier fo
 
 ## Steps to view
 This web app is deployed at https://e-wai.github.io/george/ however most features can't be accessed without the backend, whose repository is available [here](https://github.com/e-wai/george-backend). Unfortunately, this isn't publicly available as the .env file needed for configuration is not published to Github. Fortunately, we have a few screenshots available and a [demo video](https://www.youtube.com/watch?v=wxMHrHFsrss)! 
+
+![Shopping list screenshot](https://github.com/e-wai/george/blob/main/screenshots/shopping_list.png)
+![Add item flow screenshot](https://github.com/e-wai/george/blob/main/screenshots/add_product_flow.png)
+![Payment flow screenshot](https://github.com/e-wai/george/blob/main/screenshots/payment_flow.png)
