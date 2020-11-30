@@ -1,5 +1,5 @@
 # G.e.o.r.g.e. 
-### Hack Western 2020 - 3rd overall out of 103 teams
+#### 🏆 Hack Western 2020 - 3rd overall out of 103 teams
 
 Welcome to the G.e.o.r.g.e. repository! G.e.o.r.g.e. is a web application built to help users compare and order groceries at a single, convenient point. 
 
